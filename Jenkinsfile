@@ -1,8 +1,10 @@
 pipeline {
-    agent any
-    tool {
-        maven 'Maven_Setup'
-    }
+   agent {
+        label 'any'
+        tools {
+            maven 'Maven_Setup'
+              }
+         }
     stages {
         stage('Build') {
             steps {
